@@ -1,3 +1,5 @@
+/* SMALL MOBILE */
+/* up to 656px Viewports */
 @media (min-width: 0) and (max-width: 656px) {
     body {
         font-size: 18px
@@ -79,6 +81,8 @@
     }
 }
 
+/* STANDARD MOBILE */
+/* Between 657px and 977px Viewports */
 @media (min-width: 657px) and (max-width: 977px) {
     #offices .container {
         border: 0;
@@ -118,6 +122,8 @@
     }
 }
 
+/* LARGE MOBILE-TABLET-LAPTOP */
+/* between 977px and 1296px Viewports */
 @media (min-width: 977px) and (max-width: 1296px) {
     #offices .container {
         width: 952px;
@@ -140,6 +146,8 @@
     }
 }
 
+/* LAPTOP-DESKTOP */
+/* 1297px and larger */
 @media (min-width: 1297px) {
     q {
         float: right;

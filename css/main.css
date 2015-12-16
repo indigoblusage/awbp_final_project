@@ -209,6 +209,7 @@ header+h2 {
     padding: 80px 0
 }
 
+/* Body-Nav Attempt */
 body>nav {
     position: fixed;
     top: 0;
@@ -376,6 +377,107 @@ body>nav li a:focus {
     outline: 0
 }
 
+body>nav.solid .bar {
+    margin-top: -20px;
+    background-color: #ec008c;
+    background-color: rgba(217, 40, 130, 0.9)
+}
+
+body>nav.solid #logo {
+    background-image: url("/content/images/util/logo_white.png")
+}
+
+body>nav.solid #toggle .patty {
+    background: #fff
+}
+
+body>nav.solid #toggle .patty:before {
+    background: #fff
+}
+
+body>nav.solid #toggle .patty:after {
+    background: #fff
+}
+
+body>nav.open {
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+    height: 100%
+}
+
+body>nav.open .bar {
+    margin-top: 0px;
+    background: none
+}
+
+body>nav.open .patty {
+    background: none !important
+}
+
+body>nav.open .patty:after {
+    top: 0 !important;
+    background: #fff !important;
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+body>nav.open .patty:before {
+    top: 0 !important;
+    background: #fff !important;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+body>nav.open .nav-background {
+    background-color: #ec008c !important;
+    background-color: rgba(217, 40, 130, 0.9) !important
+}
+
+body>nav.open ul {
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+    -moz-transform: perspective(600px) rotateX(0deg);
+    -webkit-transform: perspective(600px) rotateX(0deg);
+    transform: perspective(600px) rotateX(0deg)
+}
+
+body>nav.closing {
+    height: 100%
+}
+
+body>nav.closing ul {
+    top: 10%;
+    visibility: visible;
+    opacity: 0;
+    -moz-transform: perspective(600px) rotateX(-10deg);
+    -webkit-transform: perspective(600px) rotateX(-10deg);
+    transform: perspective(600px) rotateX(-10deg);
+    -moz-transition: all 0.5s cubic-bezier(0.63, 0.64, 0.3, 1);
+    -o-transition: all 0.5s cubic-bezier(0.63, 0.64, 0.3, 1);
+    -webkit-transition: all 0.5s cubic-bezier(0.63, 0.64, 0.3, 1);
+    transition: all 0.5s cubic-bezier(0.63, 0.64, 0.3, 1)
+}
+
+body>nav.hide-it {
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    -webkit-transition: all 0s;
+    transition: all 0s;
+    display: none
+}
+
+.ios-fixed-fix>nav {
+    position: absolute
+}
+
 footer {
     clear: both;
     background: #000;
@@ -409,11 +511,7 @@ footer p {
     margin-top: 16px
 }
 
-footer sup {
-    font-size: 0.5em;
-    vertical-align: super
-}
-
+/* Tiles Styles */
 .tile {
     float: left;
     width: 320px;
@@ -538,51 +636,6 @@ footer sup {
     color: #fff
 }
 
-.tile.time {
-    background: #333 !important;
-    text-align: center
-}
-
-.tile.time .clock {
-    display: inline-block
-}
-
-.tile.time .clock .minute,
-.tile.time .clock .hour {
-    background: #fff
-}
-
-.tile.time .analog.clock {
-    margin-top: 60px;
-    width: 160px;
-    height: 160px
-}
-
-.tile.time .hand {
-    background: #fff
-}
-
-.tile.video {
-    background: #000
-}
-
-.tile.video .popout {
-    -webkit-perspective: 1
-}
-
-.tile.video .popout.engage .play {
-    top: 50%;
-    margin-top: 50px
-}
-
-.tile.video video {
-    min-height: 320px
-}
-
-.tile.video .close {
-    right: 28px
-}
-
 .tile figure {
     height: 100%;
     background: #ec008c
@@ -619,6 +672,7 @@ footer sup {
     letter-spacing: -0.06em
 }
 
+/* Offices Styles */
 #offices .container {
     padding: 80px 0
 }
@@ -662,6 +716,7 @@ footer sup {
     display: block
 }
 
+/* Projects Styles */
 #projects nav span,
 .carousel nav span {
     cursor: pointer;
@@ -699,178 +754,12 @@ footer sup {
     transition: background-color 0.5s
 }
 
-.carousel {
-    margin-bottom: 78px
-}
-
-.carousel .slides {
-    overflow: hidden;
-    position: relative
-}
-
-.carousel .slides .carousel-wrap {
-    white-space: nowrap;
-    font-size: 0;
-    -moz-transition: all 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
-    -o-transition: all 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
-    -webkit-transition: all 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
-    transition: all 0.5s cubic-bezier(0.33, 0.66, 0.66, 1)
-}
-
-.carousel .slides .carousel-wrap>li {
-    width: 100%;
-    display: inline-block;
-    vertical-align: top;
-    white-space: normal;
-    margin: 0 10px;
-    font-size: 16px
-}
-
-.carousel .slides .carousel-wrap>li:first-child {
-    margin-left: 0
-}
-
-.carousel nav {
-    position: absolute;
-    height: 78px;
-    bottom: -78px;
-    left: 0;
-    width: 100%;
-    padding: 32px;
-    text-align: center
-}
-
-.carousel nav span.active {
-    border-color: #333
-}
-
-.carousel nav span.active:after {
-    background-color: transparent
-}
-
-.carousel img {
-    max-width: 100%
-}
-
-.carousel .prev,
-.carousel .next {
-    position: absolute;
-    width: 20%;
-    height: 100%;
-    top: 0;
-    z-index: 100
-}
-
-.carousel .prev:hover .button,
-.carousel .next:hover .button {
-    opacity: 0.75
-}
-
-.carousel .prev {
-    left: 0
-}
-
-.carousel .prev .button {
-    left: -40px
-}
-
-.carousel .next {
-    right: 0
-}
-
-.carousel .next .button {
-    right: -40px
-}
-
-.carousel .button {
-    position: absolute;
-    top: 50%;
-    margin-top: -40px;
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    font-size: 24px;
-    background: #ec008c;
-    opacity: 0
-}
-
-.carousel .button:hover {
-    opacity: 1 !important
-}
-
-.carousel.inverted .button {
-    background: #393C3C;
-    color: #000
-}
-
-.carousel.inverted span.active {
-    border-color: #fff
-}
-
-body.clip {
-    overflow: hidden !important
-}
-
 header p {
     max-width: 960px;
     margin: 0 auto
 }
 
-.homepage.gallery {
-    overflow: hidden;
-    height: 100%
-}
-
-.homepage.gallery.Android {
-    overflow: visible !important
-}
-
-.homepage.gallery.Android .slide {
-    -webkit-transform: none !important
-}
-
-.homepage.gallery #projects {
-    height: 100%
-}
-
-.homepage.gallery #projects .slide {
-    position: absolute;
-    background-attachment: fixed;
-    height: 0;
-    -moz-transition: height 0.9s cubic-bezier(0.63, 0.64, 0.3, 1);
-    -o-transition: height 0.9s cubic-bezier(0.63, 0.64, 0.3, 1);
-    -webkit-transition: height 0.9s cubic-bezier(0.63, 0.64, 0.3, 1);
-    transition: height 0.9s cubic-bezier(0.63, 0.64, 0.3, 1);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0)
-}
-
-.homepage.gallery #projects .slide.no-animation {
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    -webkit-transition: none !important;
-    transition: none !important
-}
-
-.homepage.gallery #projects .slide.active {
-    height: 100%
-}
-
-.homepage.gallery #projects nav {
-    opacity: 1;
-    display: block
-}
-
-.homepage.shifted #projects nav {
-    opacity: 0
-}
-
-.homepage.shifted #wrap {
-    top: -100%
-}
-
+/* Home Page Styles */
 .homepage #wrap {
     top: 0;
     width: 100%;
